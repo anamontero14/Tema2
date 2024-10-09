@@ -29,9 +29,23 @@ public class Ejer7 {
 			// le digo al usuario que tiene que ser un nº dentro del rango
 			System.out.println("El nº introducido debe estar dentro del rango");
 		} else if (num <= 9) {
-			
-			//le digo que si numero es mayor o igual a 9 tendrá una cifra
-			System.out.println("El nº introducido ("+ num + ") tiene 1 cifra");
+
+			// le digo que si numero es mayor o igual a 9 tendrá una cifra
+			System.out.println("El nº introducido (" + num + ") tiene 1 cifra");
+		} else if (num >= 10 && num <= 99) {
+
+			// le digo que si numero es mayor o igual a 9 tendrá una cifra
+			System.out.println("El nº introducido (" + num + ") tiene 2 cifra");
+		} else if (num >= 100 && num <= 999) {
+
+			// le digo que si numero es mayor o igual a 9 tendrá una cifra
+			System.out.println("El nº introducido (" + num + ") tiene 3 cifra");
+		} else if (num >= 1000 && num <= 9999) {
+
+			// le digo que si numero es mayor o igual a 9 tendrá una cifra
+			System.out.println("El nº introducido (" + num + ") tiene 4 cifra");
+		} else {
+			System.out.println("El nº introducido (" + num + ") tiene 5 cifra");
 		}
 
 		// cierro el Scanner
