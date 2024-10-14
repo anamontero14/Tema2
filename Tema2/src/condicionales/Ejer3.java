@@ -41,7 +41,7 @@ public class Ejer3 {
 		// Hayo el resto del nº entre 23 para saber que letra le corresponde
 		numLetra = numDNI % 23;
 
-		if (numDNI > 8 || numDNI < 8) {
+		if (numDNI > 8 && numDNI < 8) {
 
 			System.out.println("Ha introducido un valor inválido");
 		} else {
