@@ -6,6 +6,13 @@ public class Ejer1 {
 
 	public static void main(String[] args) {
 
+		/*
+		 * 1º: Probé de esta manera pero tuve un error en una de las divisiones para
+		 * averiguar las cifras de un número entre 100 y 999
+		 */
+
+		// 2º: Arreglé lo anteriormente mencionado y ya funciona como debe
+
 		// 1º Solicitar al usuario un nº comprendido entre 0 y 9999
 		// 2º Habrá que indicar si el nº es capicúa
 
