@@ -52,13 +52,13 @@ public class Ejer1 {
 		} else if (num >= 100 && num <= 999) {
 
 			// para saber la primera cifra
-			cifra1 = num / 1000;
+			cifra1 = num / 100;
 
 			// para saber la segunda cifra
-			cifra2 = (num % 1000) / 100;
+			cifra2 = (num % 100) / 10;
 
 			// para saber la tercera cifra
-			cifra3 = (num % 1000) % 100 / 10;
+			cifra3 = (num % 100) % 10 / 1;
 
 			if (cifra1 == cifra3) {
 				System.out.println("El nº es capicúa");
@@ -77,7 +77,7 @@ public class Ejer1 {
 			cifra3 = (num % 1000) % 100 / 10;
 
 			// para saber la cuarta cifra
-			cifra3 = (num % 1000) % 100 % 10 / 1;
+			cifra4 = (num % 1000) % 100 % 10 / 1;
 
 			if (cifra1 == cifra4 && cifra2 == cifra3) {
 				System.out.println("El nº es capicúa");
