@@ -75,7 +75,7 @@ public class Ejer1 {
 
 			// para saber la tercera cifra
 			cifra3 = (num % 1000) % 100 / 10;
-			
+
 			// para saber la cuarta cifra
 			cifra3 = (num % 1000) % 100 % 10 / 1;
 
