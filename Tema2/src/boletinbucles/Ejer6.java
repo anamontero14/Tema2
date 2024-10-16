@@ -11,8 +11,6 @@ public class Ejer6 {
 		 * cuando se utilice -1 como altura). La aplicación debe devolver la altura del
 		 * árbol más alto
 		 */
-		
-		
 
 	}
 
