@@ -13,22 +13,16 @@ public class Ejer5 {
 		 * una y otra vez hasta adivinarlo (el usuario deberá indicarle al ordenador si
 		 * es mayor, menor o igual al número que ha pensado)
 		 */
-		
+
 		// Inicializo el random
 		Random rand = new Random();
-		
+
 		// Inicializo el Scanner
 		Scanner leer = new Scanner(System.in);
-		
-		String respuesta = "si";
-		
-		
-		
-			// Variable que almacenará el nº random
+
+		// Variable que almacenará el nº random
 		int nRandomMáquina = rand.nextInt(1, 101);
-		
-		
-		
+
 		// Cierro el Scanner
 		leer.close();
 
