@@ -8,7 +8,7 @@ public class Ejer4 {
 	public static void main(String[] args) {
 
 		// Variable that will contain the number typed by the user
-		int num = 0;
+		int num;
 
 		// I create the Scanner
 		Scanner reader = new Scanner(System.in);
