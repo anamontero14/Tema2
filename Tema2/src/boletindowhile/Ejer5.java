@@ -20,7 +20,11 @@ public class Ejer5 {
 		// Inicializo el Scanner
 		Scanner leer = new Scanner(System.in);
 		
-		// Variable que almacenará el nº random
+		String respuesta = "si";
+		
+		
+		
+			// Variable que almacenará el nº random
 		int nRandomMáquina = rand.nextInt(1, 101);
 		
 		
