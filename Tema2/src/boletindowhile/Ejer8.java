@@ -23,10 +23,10 @@ public class Ejer8 {
         Scanner leer = new Scanner(System.in);
 
         // Variable para controlar la repetición de las preguntas
-        boolean validInput;
+        boolean salir;
 
         do {
-            validInput = false; // Reiniciamos la variable
+            salir = false; // Reiniciamos la variable
 
             // Le digo al usuario por pantalla lo que tiene que hacer
             System.out.println("Introduzca el nº que ha sacado con la primera y segunda tirada respectivamente en formato cadena");
@@ -37,12 +37,12 @@ public class Ejer8 {
 
             // Verificamos si al menos una tirada no está vacía
             if (!tirada1.isEmpty() || !tirada2.isEmpty()) {
-                validInput = true; // Hay datos válidos
+                salir = true; // Hay datos válidos
             } else {
                 System.out.println("Por favor, introduzca al menos un valor para las tiradas.");
             }
 
-        } while (!validInput); // Repite hasta que haya entradas válidas
+        } while (!salir); // Repite hasta que haya entradas válidas
 
         /*
          * A continuación haré lo siguiente: para hacer que los números introducidos

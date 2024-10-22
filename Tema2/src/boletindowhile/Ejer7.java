@@ -36,16 +36,16 @@ public class Ejer7 {
 
 			switch (respuesta) { // Hacer la comparación insensible a mayúsculas
 
-			case "A" -> {
+			case "A", "a" -> {
 				System.out.println("Resultado: " + (num1 + num2));
 			}
-			case "B" -> {
+			case "B", "b" -> {
 				System.out.println("Resultado: " + (num1 - num2));
 			}
-			case "C" -> {
+			case "C", "c" -> {
 				System.out.println("Resultado: " + (num1 * num2));
 			}
-			case "D" -> {
+			case "D", "d" -> {
 				// Comprobar si el divisor es cero antes de dividir
 				if (num2 != 0) {
 					System.out.println("Resultado: " + (num1 / num2));
@@ -53,7 +53,7 @@ public class Ejer7 {
 					System.out.println("No se puede dividir por cero.");
 				}
 			}
-			case "E" -> {
+			case "E", "e" -> {
 				System.out.println("Saliendo");
 			}
 			default -> {
