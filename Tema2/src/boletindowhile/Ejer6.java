@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Ejer6 {
 
 	public static void main(String[] args) {
-
 		/*
 		 * Repetir el juego de PIEDRA - PAPEL - TIJERA pero con las siguientes
-		 * consideraciones: Al jugador 1 se le pedirá que introduzca una opción válida:
-		 * PIEDRA, PAPEL o TIJERA. Mientras no introduzca un valor válido se le seguirá
-		 * preguntando.
+		 * consideraciones:
+		 * 
+		 * Al jugador 1 se le pedirá que introduzca una opción válida: PIEDRA, PAPEL o
+		 * TIJERA. Mientras no introduzca un valor válido se le seguirá preguntando.
 		 * 
 		 * Al jugador 2 se le pedirá que introduzca una opción válida: PIEDRA, PAPEL o
 		 * TIJERA. Mientras no introduzca un valor válido se le seguirá preguntando.
@@ -18,59 +18,70 @@ public class Ejer6 {
 		 * Al terminar una partida se preguntará si se quiere seguir jugando. Mientras
 		 * se pulse “S” se volverá a iniciar la partida.
 		 */
-
-		// Creo constantes para piedra, papel y tijera ya que son cadenas que no se van
-		// a modificar en el código
+		/*
+		 * Creación de las constantes PIEDRA, PAPEL y TIJERA que guardarán las 3 //
+		 * opciones que tendrá el juego y las cuales no se modificarán a medida que //
+		 * avance el código
+		 */
 		final String PIEDRA = "PIEDRA";
 		final String PAPEL = "PAPEL";
 		final String TIJERA = "TIJERA";
-
-		// Variable para almacenar la respuesta del usuario
-		String respuesta1;
-		String respuesta2;
-
-		// Variable para salir
-		char salir = 'S';
-
+		/*
+		 * variable que almacenará el dato que tiene que introducir el usuario para //
+		 * salir
+		 */
+		String salir;
+		// Cadenas que almacenarán las respuestas del J1 y el J2 respectivamente
+		String respuestaJ1;
+		String respuestaJ2;
 		// Creación del Scanner
 		Scanner leer = new Scanner(System.in);
-
+		
 		do {
 
-			System.out.println("¿Piedra, papel o tijera? ¿J1?");
-			respuesta1 = leer.nextLine();
+			do {
+				// Se le pregunta al usuario
+				System.out.println("J1, ¿piedra, papel o tijera?");
+				// El usuario me responde y lo almaceno en la variable respuestaJ1
+				respuestaJ1 = leer.nextLine();
+				// Se le pregunta al usuario
+				System.out.println("J2, ¿piedra, papel o tijera?");
+				// El usuario me responde y lo almaceno en la variable respuestaJ2
+				respuestaJ2 = leer.nextLine();
 
-			System.out.println("¿Piedra, papel o tijera? ¿J2?");
-			respuesta2 = leer.nextLine();
+			} while (respuestaJ1.isEmpty() && respuestaJ2.isEmpty());
 
-			if (respuesta1.equalsIgnoreCase(PIEDRA) && respuesta2.equalsIgnoreCase(TIJERA)) {
+			if (respuestaJ1.equalsIgnoreCase(PIEDRA) && respuestaJ2.equalsIgnoreCase(TIJERA)) {
 				System.out.println("Gana el player 1");
-			} else if (respuesta1.equalsIgnoreCase(PIEDRA) && respuesta2.equalsIgnoreCase(PAPEL)) {
+			} else if (respuestaJ1.equalsIgnoreCase(PIEDRA) && respuestaJ2.equalsIgnoreCase(PAPEL)) {
 				System.out.println("Gana el player 2");
-			} else if (respuesta1.equalsIgnoreCase(PIEDRA) && respuesta2.equalsIgnoreCase(PIEDRA)) {
+			} else if (respuestaJ1.equalsIgnoreCase(PIEDRA) && respuestaJ2.equalsIgnoreCase(PIEDRA)) {
 				System.out.println("Empate");
-			} else if (respuesta1.equalsIgnoreCase(PAPEL) && respuesta2.equalsIgnoreCase(PIEDRA)) {
+			} else if (respuestaJ1.equalsIgnoreCase(PAPEL) && respuestaJ2.equalsIgnoreCase(PIEDRA)) {
 				System.out.println("Gana el player 1");
-			} else if (respuesta1.equalsIgnoreCase(PAPEL) && respuesta2.equalsIgnoreCase(PAPEL)) {
+			} else if (respuestaJ1.equalsIgnoreCase(PAPEL) && respuestaJ2.equalsIgnoreCase(PAPEL)) {
 				System.out.println("Empate");
-			} else if (respuesta1.equalsIgnoreCase(PAPEL) && respuesta2.equalsIgnoreCase(TIJERA)) {
+			} else if (respuestaJ1.equalsIgnoreCase(PAPEL) && respuestaJ2.equalsIgnoreCase(TIJERA)) {
 				System.out.println("Gana el player 2");
-			} else if (respuesta1.equalsIgnoreCase(TIJERA) && respuesta2.equalsIgnoreCase(PIEDRA)) {
+			} else if (respuestaJ1.equalsIgnoreCase(TIJERA) && respuestaJ2.equalsIgnoreCase(PIEDRA)) {
 				System.out.println("Gana el player 2");
-			} else if (respuesta1.equalsIgnoreCase(TIJERA) && respuesta2.equalsIgnoreCase(PAPEL)) {
+			} else if (respuestaJ1.equalsIgnoreCase(TIJERA) && respuestaJ2.equalsIgnoreCase(PAPEL)) {
 				System.out.println("Gana el player 1");
 			} else {
 				System.out.println("Empate");
 			}
 
-			System.out.println("¿Quieres seguir jugando?");
+			// Le pregunto al usuario si quiere seguir jugando
+			System.out.println("¿Quiere seguir?");
+
+			// Almaceno la respuesta en la variable salir
 			salir = leer.nextLine();
 
-		} while (salir == 'S' );
+		} while (salir.equalsIgnoreCase("S"));
 
-		// Cierro el Scanner
+		// Anuncio el fin del programa
+		System.out.println("Fin del programa");
+		// Cierre de Scanner
 		leer.close();
-
 	}
-
 }
