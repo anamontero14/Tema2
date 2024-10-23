@@ -31,12 +31,16 @@ public class Ejer8 {
 		num2 = leer.nextInt();
 
 		if (num1 < num2) {
-			
-			for (num1 = num1; num1 < num2; num1++){
-				
+
+			for (num1 = num1; num1 < num2; num1++) {
+				System.out.println(num1);
 			}
-			
-		 }
+
+		} else {
+			for (num2 = num2; num2 < num1; num2++) {
+				System.out.println(num2);
+			}
+		}
 
 		// Cerrar el Scanner
 		leer.close();
