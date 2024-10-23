@@ -18,13 +18,13 @@ public class Ejer2 {
 		Scanner leer = new Scanner(System.in);
 
 		// Le pido al usuario que introduzca un nº
-		System.out.println("Introduzca un nº para aprender a contar hasta él");
+		System.out.println("Introduzca un nº para mostrar cuáles múltiplos de 3 hay hasta el nº que introducirá usted:");
 
 		// Asigno el dato a la variable
 		num = leer.nextInt();
 
-		for (int i = 1; i <= num; i *= 3) {
-			System.out.println(i);
+		for (int i = 1; i * 3 <= num; i++) {
+			System.out.println(i * 3);
 		}
 
 		// Cierro el Scanner
