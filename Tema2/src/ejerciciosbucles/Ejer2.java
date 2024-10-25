@@ -27,18 +27,21 @@ public class Ejer2 {
 		num = leer.nextInt();
 
 		// Cuento desde 2 hasta un nº por debajo del nº introducido
-		for (int i = 2; i < num; i++) {
 
-			// Si el resto de dividir el nº entre i es 0
-			if (num % i == 0) {
+		for (int i = 1; i < num; i++) {
 
-				// Le incremento 1 a la variable divisores
-				++divisores;
+			for (int j = 2; j < num; i++) {
+
+				// Si el resto de dividir el nº entre i es 0
+				if (num % i == 0) {
+
+					// Le incremento 1 a la variable divisores
+					++divisores;
+
+				}
 
 			}
-
 		}
-
 		/*
 		 * Si la variable divisores es igual a 0 significa que ningún número desde 2
 		 * hasta num - 1 es divisible por el nº introducido lo que significa que ES
