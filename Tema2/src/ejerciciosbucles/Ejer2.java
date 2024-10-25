@@ -1,5 +1,7 @@
 package ejerciciosbucles;
 
+import java.util.Scanner;
+
 public class Ejer2 {
 
 	public static void main(String[] args) {
@@ -8,6 +10,21 @@ public class Ejer2 {
 		 * Realiza un programa que nos pida un número n y nos diga cuántos números hay
 		 * entre 1 y n que sean primos
 		 */
+
+		// Variable para almacenar el nº introducido
+		int num;
+
+		// Almacenar el nº de divisores
+		int divisores = 0;
+
+		// Iniciar el Scanner
+		Scanner leer = new Scanner(System.in);
+
+		// Le pido al usuario que introduzca un nº
+		System.out.println("Introduzca un nº");
+
+		// Almaceno el nº en la variable
+		num = leer.nextInt();
 
 		// Cuento desde 2 hasta un nº por debajo del nº introducido
 		for (int i = 2; i < num; i++) {
@@ -37,6 +54,9 @@ public class Ejer2 {
 			System.out.println("El número NO es primo");
 
 		}
+
+		// Cerrar el Scanner
+		leer.close();
 
 	}
 
