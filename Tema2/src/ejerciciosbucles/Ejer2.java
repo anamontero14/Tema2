@@ -17,6 +17,10 @@ public class Ejer2 {
 		// Almacenar el nº de divisores
 		int divisores = 0;
 
+		int resto;
+
+		int primos = 0;
+
 		// Iniciar el Scanner
 		Scanner leer = new Scanner(System.in);
 
@@ -28,12 +32,24 @@ public class Ejer2 {
 
 		// Cuento desde 2 hasta un nº por debajo del nº introducido
 
+		// CUENTA DESDE 1 HASTA EL Nº INTRODUCIDO
 		for (int i = 1; i < num; i++) {
 
-			for (int j = 2; j < num; i++) {
+			/*
+			 * VA COMPROBANDO DESDE EL Nº 1 HASTA EL Nº INTRODUCIDO SI LOS Nº SON PRIMOS O
+			 * NO: AL SABER EL RESTO DE LA DIVISION ENTRE EL Nº DEL PRIMER FOR Y ESTE IREMOS
+			 * SABIENDO SI SU RESTO ES 0 O NO, SI EL RESTO ES 0 SE LE VA AÑADIENDO UNO A LOS
+			 * DIVISORES
+			 */
+			for (int j = 1; j < num; j++) {
 
-				// Si el resto de dividir el nº entre i es 0
-				if (num % i == 0) {
+				/*
+				 * Nº QUE ESTE EN EL PRIMER FOR MÓDULO DEL Nº QUE VA AUMENTANDO EN EL SEGUNDO
+				 * FOR
+				 */
+				resto = i % j;
+
+				if (resto == 0) {
 
 					// Le incremento 1 a la variable divisores
 					++divisores;
@@ -41,6 +57,12 @@ public class Ejer2 {
 				}
 
 			}
+
+			if (divisores == 2) {
+				primos++;
+			}
+
+			divisores = 0;
 		}
 		/*
 		 * Si la variable divisores es igual a 0 significa que ningún número desde 2
@@ -48,15 +70,7 @@ public class Ejer2 {
 		 * PRIMO en cambio si la variable no es igual a cero significará que sí tiene
 		 * divisores dentro de ese rango y que por lo tanto NO ES PRIMO
 		 */
-		if (divisores == 0) {
-
-			System.out.println("El número es primo");
-
-		} else {
-
-			System.out.println("El número NO es primo");
-
-		}
+		System.out.println("Entre 1 y " + num + " hay " + primos + " números primos");
 
 		// Cerrar el Scanner
 		leer.close();
