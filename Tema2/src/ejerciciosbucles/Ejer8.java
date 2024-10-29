@@ -17,7 +17,7 @@ public class Ejer8 {
 		int num;
 
 		// variable que contendrá los números que se le van solapando;
-		int almacenNumeros;
+		int almacenNumeros = 0;
 
 		// variable que almacenará el número de números introducidos MENOS el 0
 		int contadorAciertos = 0;
@@ -32,27 +32,30 @@ public class Ejer8 {
 		do {
 
 			// le digo al usuario lo que debe hacer
-			System.out.println("Introduzca un nº: ");
+			System.out.print("Introduzca un nº: ");
 
 			// almacena la respuesta en la variable num
 			num = leer.nextInt();
-
-			// igualo la variable que almacena los números al dato introducido
-			almacenNumeros = num;
 
 			// si almacenNumeros es menor o igual que el número introducido
 			if (almacenNumeros <= num && num != 0) {
 				// incrementa contadorAciertos
 				contadorAciertos++;
 
+				// igualo la variable que almacena los números al dato introducido
+				almacenNumeros = num;
+
 				// si no
-			} else if (almacenNumeros >= num && num != 0){
+			} else if (almacenNumeros >= num && num != 0) {
 				// incrementa contadorFallos
 				contadorFallos++;
+
+				// Le digo al usuario que ha cometido un fallo
+				System.out.println("Fallo, el número introducido es menor");
 			}
 			;
 
-		} while (almacenNumeros != 0);
+		} while (num != 0);
 
 		// muestro el nº de números acertados y registrados
 		System.out.println("Total de números introducidos: " + contadorAciertos);
