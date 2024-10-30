@@ -1,5 +1,6 @@
 package ejerciciosbucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejer10 {
@@ -26,11 +27,26 @@ public class Ejer10 {
 
 		while (error) {
 
-			// Solicitar al usuario que introduzca un número entero no negativo
-			System.out.print("Introduce un número para verificar si es capicúa: ");
+			try {
 
-			// almacenar el dato en la variable
-			num = leer.nextInt();
+				// Solicitar al usuario que introduzca un número entero no negativo
+				System.out.print("Introduce un número para verificar si es capicúa: ");
+
+				// almacenar el dato en la variable
+				num = leer.nextInt();
+
+				// el número deberá de ser mayor que 0
+				assert num > 0 : "El número tiene que ser mayor que 0";
+
+				error = false;
+
+			} catch (AssertionError a) {
+				System.err.println(a.getMessage());
+			} catch (InputMismatchException e) {
+				System.err.println("Introduce un número no una cadena");
+			} finally {
+				leer.nextLine();
+			}
 		}
 
 		// Verificar que el número sea mayor o igual a 0
