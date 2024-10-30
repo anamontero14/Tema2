@@ -1,5 +1,6 @@
 package ejerciciosbucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejer8 {
@@ -14,7 +15,7 @@ public class Ejer8 {
 		 */
 
 		// variable que almacenará el número introducido
-		int num;
+		int num = 0;
 
 		// variable que contendrá los números que se le van solapando;
 		int almacenNumeros = 0;
@@ -25,17 +26,38 @@ public class Ejer8 {
 		// variable que almcenará los números que no me valen
 		int contadorFallos = 0;
 
+		// almacenará la variable error que me permitirá inicializar el bucle de
+		// comprobación
+		boolean error = true;
+
 		// creación del Scanner
 		Scanner leer = new Scanner(System.in);
 
 		// haz las instrucciones mientras que num no sea 0
 		do {
 
-			// le digo al usuario lo que debe hacer
-			System.out.print("Introduzca un nº: ");
+			while (error) {
+				try {
 
-			// almacena la respuesta en la variable num
-			num = leer.nextInt();
+					// le digo al usuario lo que debe hacer
+					System.out.print("Introduzca un nº: ");
+
+					// almacena la respuesta en la variable num
+					num = leer.nextInt();
+					
+					assert num >= 0 : "Debe introducir un número mayor que 0.";
+
+					// me salgo del bucle
+					break;
+				} catch (AssertionError a) {
+					System.err.println(a.getMessage());
+				} catch (InputMismatchException e) {
+					System.err.println("Introduzca un número, no una cadena.");
+
+				} finally {
+					leer.nextLine();
+				}
+			}
 
 			// si almacenNumeros es menor o igual que el número introducido
 			if (almacenNumeros <= num && num != 0) {

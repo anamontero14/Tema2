@@ -6,18 +6,32 @@ public class Ejer10 {
 
 	public static void main(String[] args) {
 
-		// Inicializar todas las variables al inicio
-		int num; // Número introducido por el usuario
-		int original; // Almacena el valor original de num para comparar al final
-		int invertido = 0; // Almacena el número invertido
-		int digito; // Almacena el último dígito de num en cada iteración del ciclo
+		// variable que almacena el número introducido por el suuario
+		int num = 0;
+
+		// variable que almacena el número original introducido
+		int original;
+
+		// almacena el valor del número invertido
+		int invertido = 0;
+
+		// variable que almacenará los dígitos
+		int digito;
+
+		// variable para ejecutar el bucle de comprobacion
+		boolean error = true;
 
 		// Crear Scanner al inicio
 		Scanner leer = new Scanner(System.in);
 
-		// Solicitar al usuario que introduzca un número entero no negativo
-		System.out.print("Introduce un número para verificar si es capicúa: ");
-		num = leer.nextInt();
+		while (error) {
+
+			// Solicitar al usuario que introduzca un número entero no negativo
+			System.out.print("Introduce un número para verificar si es capicúa: ");
+
+			// almacenar el dato en la variable
+			num = leer.nextInt();
+		}
 
 		// Verificar que el número sea mayor o igual a 0
 		if (num >= 0) {
