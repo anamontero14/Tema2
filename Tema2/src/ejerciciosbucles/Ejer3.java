@@ -27,6 +27,11 @@ public class Ejer3 {
 		// variable para almacenar el nº menor
 		int max = 0;
 
+		// variable para poder salir del bucle
+		boolean salir = false;
+
+		int encontrar = 0;
+
 		// variable que almacenará el valor del módulo entre el más pequeño
 		int modulo1 = 0;
 
@@ -52,6 +57,8 @@ public class Ejer3 {
 			// el mínimo es igual a num2
 			min = num2;
 
+			encontrar = min;
+
 			// el máximo es igual a num1
 			max = num1;
 
@@ -59,6 +66,8 @@ public class Ejer3 {
 		} else if (num2 > num1) {
 			// el mínimo es num1
 			min = num1;
+
+			encontrar = min;
 
 			// el máximo es num2
 			max = num2;
@@ -68,29 +77,33 @@ public class Ejer3 {
 			// el mínimo es num2 (por poner algo, pq como son iguales pues da igual)
 			min = num2;
 
+			encontrar = min;
+
 			// el máximo es num1
 			max = num1;
 		}
 
 		// contar descendientemente desde el mínimo hasta 1
-		for (int i = min; i >= 1; i--) {
+		while (!salir) {
 
 			// módulo del mínimo hasta encontrar el que de 0
-			modulo1 = min % i;
+			modulo1 = min % encontrar;
 
 			// el módulo del máximo hasta encontrar el que llega a 0
-			modulo2 = max % i;
+			modulo2 = max % encontrar;
 
 			// si el módulo es igual a 0
 			if (modulo1 == 0 && modulo2 == 0) {
 
 				// iguala la variable maxcomdiv al nº por el que ha dado el módulo 0
-				maxcomdiv = i;
-				break;
+				maxcomdiv = encontrar;
+				salir = true;
 			}
 			;
+			
+			encontrar--;
 
-		}
+		};
 
 		/*
 		 * Si se introdujera 0 como nº el MCD debería de ser el otro número que es
