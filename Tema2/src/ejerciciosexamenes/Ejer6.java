@@ -11,6 +11,7 @@ public class Ejer6 {
 		int pago = 0;
 		int devolver = 0;
 		int tipoMoneda = 200;
+		int cantidadMonedas = 0;
 
 		// Creación del Scanner
 		Scanner leer = new Scanner(System.in);
@@ -34,7 +35,8 @@ public class Ejer6 {
 
 			// Desglose de monedas
 			while (devolver > 0) {
-				int cantidadMonedas = devolver / tipoMoneda;
+				
+				cantidadMonedas = devolver / tipoMoneda;
 				if (cantidadMonedas > 0) {
 					switch (tipoMoneda) {
 					case 200 -> System.out.println("Monedas de 2 euros: " + cantidadMonedas);
